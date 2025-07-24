@@ -1,0 +1,32 @@
+# Ignore output data and logs
+data/hybrid_output.csv
+data/hybrid_output_sanitized.csv
+data/screenshots/
+*.log
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+
+# Jupyter/Notebook
+.ipynb_checkpoints/
+
+# Environments
+.env
+.venv/
+env/
+venv/
+
+# VS Code
+.vscode/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Playwright storage
+playwright/.cache/
