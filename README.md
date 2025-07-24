@@ -4,8 +4,6 @@ A scalable web crawler that intelligently decides **when** to render pages with 
 
 Inspired by [Andrew Chan’s billion-page crawler](https://andrewkchan.dev/posts/crawler.html), this project adds a **conditional JS rendering layer**, driven by metadata heuristics like DOM sparsity, script count, and text length.
 
----
-
 ## Project Structure
 
 ```
@@ -29,8 +27,6 @@ hybrid\_crawler\_js/
 
 ````
 
----
-
 ## Installation
 
 ```bash
@@ -43,8 +39,6 @@ pip install -r requirements.txt
 # Install Playwright and browser engine
 playwright install
 ````
-
----
 
 ## Usage
 
@@ -82,7 +76,6 @@ This will:
 * Render with Playwright only if needed
 * Save results to `data/hybrid_output.csv`
 
----
 
 ## Example Output
 
@@ -94,7 +87,6 @@ This will:
 | [https://twitter.com](https://twitter.com)             | False    | 1.0   | Playwright error (headers too large) |
 | [https://linkedin.com/jobs](https://linkedin.com/jobs) | False    | 0.0   |                                      |
 
----
 
 ## Metrics
 
@@ -116,16 +108,12 @@ Summary Metrics:
  avg_content_length: 18390
 ```
 
----
-
 ## How It Works
 
 * `base_fetcher.py`: Async HTTP fetch for fast crawling
 * `scorer.py`: Applies heuristic rules (text length, DOM density, noscript tags, etc.) to estimate whether JS is needed
 * `js_renderer.py`: Uses Playwright to render JS-heavy pages on demand
 * `hybrid_runner.py`: Orchestrates fetch → score → decide → render pipeline
-
----
 
 ## Testing
 
@@ -137,8 +125,6 @@ python -m tests.test_end_to_end
 
 Verifies output file creation, scoring, and JS routing behavior.
 
----
-
 ## Next Features
 
 * Screenshot capture (`.png`)
@@ -146,8 +132,6 @@ Verifies output file creation, scoring, and JS routing behavior.
 * robots.txt support
 * Configurable scoring weights
 * Lightweight JS-needed classifier (coming)
-
----
 
 ## Disclaimer
 
@@ -161,13 +145,9 @@ This project:
 
 Always consult a website's **Terms of Service** and **robots.txt** before crawling at scale.
 
----
-
 ## Acknowledgements
 
 Built as an open-source proof-of-concept following the brilliant [crawler performance post by Andrew Chan](https://andrewkchan.dev/posts/crawler.html).
-
----
 
 ## Questions or Suggestions?
 
