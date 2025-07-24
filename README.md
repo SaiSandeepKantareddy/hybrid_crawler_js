@@ -172,7 +172,3 @@ Built as an open-source proof-of-concept following the brilliant [crawler perfor
 ## Questions or Suggestions?
 
 Open an issue or drop a message.
-
-```
-
-
