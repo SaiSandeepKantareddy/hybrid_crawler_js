@@ -19,5 +19,4 @@ Instead of rendering every page (which is expensive), it:
 - `BeautifulSoup` / `lxml` – for HTML parsing  
 - `pandas`, `tqdm` – for metrics and logging
 
-## Folder Structure
 
