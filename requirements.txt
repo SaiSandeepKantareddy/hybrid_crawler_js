@@ -1,0 +1,6 @@
+aiohttp
+playwright
+beautifulsoup4
+lxml
+pandas
+tqdm
